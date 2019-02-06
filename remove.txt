@@ -122,3 +122,14 @@ moveToRecycle() {
 
    mv $1 ../deleted/$newFileName
 }
+
+#This function functions writes the filename and inode to the hidden file
+appendToHidden()  {
+  inode=$(ls -i $1 | cut -d" " -f1)
+  newFileName="$justFileName""_""$inode"
+  hiddenFileName=$(find $HOME -name *$justFileName -type f)
+  echo "$newFileName:$hiddenFileName" >> ../.restore.info
+}
+
+##################################MAIN#####################################
+getArg $*
