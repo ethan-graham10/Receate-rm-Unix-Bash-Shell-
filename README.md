@@ -20,5 +20,6 @@ How-to-use:
     
       bash restore filename_inode
     
-    Note that for restore, filename is just the basename for the file you want to restore. The file will still be restored to the correct     path regardless. 
+    Note that for restore, filename is just the basename for the file you want to restore. 
+    The file will still be restored to the correct path regardless. 
 
